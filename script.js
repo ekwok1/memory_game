@@ -3,11 +3,11 @@ window.onload = function() {
 };
 
 function revealCard(){
-	var card = document.querySelectorAll(".card");
+	var img = document.querySelectorAll("img");
 
-	_.each(card, function(element) {
+	_.each(img, function(element){
 		element.addEventListener("click", function(){
-			this.classList.remove("facedown");
+			this.src = "images/kobe_bryant.jpg";
 		});
 	});
 }

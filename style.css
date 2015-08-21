@@ -2,9 +2,6 @@
 	height: 300px;
 	width: 200px;
 	display: inline-block;
-	border: 10px solid black;
-}
-
-.facedown {
-	background-color: purple;
+	border: 8px solid black;
+	margin-bottom: 5px;
 }
