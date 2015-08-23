@@ -2,24 +2,27 @@ window.onload = function() {
 	addListeners();
 };
 
-// LOGIC:
-
-// addListeners to all
-// on click1 => remove listener from clicked; add class to image (picked)
-// on click2 => add class to image (picked)
-// compare two picked...if src == ; stay unflipped count + 1, otherwise, src back to nba_logo...
-// if count = 5, show win message
-
-
 // GAME LOGIC
 
 var cardsFlipped = 0;
 
-function cardCompareHelper(){
+function cardCompare(){
 	var cardsPicked = document.querySelectorAll(".picked");
 	if (cardsFlipped === 2) {
+
 		if (cardsPicked[0].src === cardsPicked[1].src) {
+			cardsPicked[0].classList.remove("picked");
+			cardsPicked[1].classList.remove("picked");
+			cardsPicked = [];
+			cardsFlipped = 0;
 			console.log("match");
+		} else {
+			cardsPicked[0].src = "images/nba_logo.jpg";
+			cardsPicked[1].src = "images/nba_logo.jpg";
+			cardsPicked[0].classList.remove("picked");
+			cardsPicked[1].classList.remove("picked");
+			cardsPicked = [];
+			console.log(cardsPicked);
 			cardsFlipped = 0;
 		}
 	}	
@@ -36,7 +39,7 @@ function addListeners(){
 			this.src = imageLib[shufIndex[index]];
 			this.classList.add("picked");
 			cardsFlipped++;
-			cardCompareHelper();
+			window.setTimeout(function(){cardCompare()}, 1000);
 		});
 	});
 }
