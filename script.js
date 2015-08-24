@@ -25,15 +25,19 @@ function getCardsPicked(){
 	return document.querySelectorAll(".picked");
 }
 
-// CARD COMPARE AND SCOREBOARD
+// CARD COMPARE AND SCOREBOARD AND CONGRATS MESSAGE!
 
 function cardCompare(){
 	var cardsPicked = document.querySelectorAll(".picked");
 	var scoreBoard = document.querySelector("#currentScore");
+	var congrats = document.querySelector("#congrats");
 
 		if (cardsPicked[0].src === cardsPicked[1].src) {
 				currentScore++;
 				scoreBoard.innerText = currentScore;
+				if (currentScore === 8) {
+					congrats.innerText = "Congratulations! You win!";
+				}
 			for (i=0; i<cardsPicked.length; i++) {
 				cardsPicked[i].classList.remove("picked");
 			}
@@ -45,8 +49,6 @@ function cardCompare(){
 		}
 		cardsPicked = [];
 }
-
-// CONGRATULATIONS MESSAGE
 
 // SHUFFLE METHOD
 

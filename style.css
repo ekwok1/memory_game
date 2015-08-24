@@ -20,3 +20,12 @@ h1 {
   border-radius:4px;
   margin-top: 40px;
 }
+
+#congrats {
+	position: absolute;
+	color: red;
+	font-weight: bolder;
+	font-size: 300%;
+	right: 30px;
+	top: 35px;
+}
