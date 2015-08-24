@@ -25,11 +25,15 @@ function getCardsPicked(){
 	return document.querySelectorAll(".picked");
 }
 
-// CARD COMPARE
+// CARD COMPARE AND SCOREBOARD
 
 function cardCompare(){
 	var cardsPicked = document.querySelectorAll(".picked");
+	var scoreBoard = document.querySelector("#currentScore");
+
 		if (cardsPicked[0].src === cardsPicked[1].src) {
+				currentScore++;
+				scoreBoard.innerText = currentScore;
 			for (i=0; i<cardsPicked.length; i++) {
 				cardsPicked[i].classList.remove("picked");
 			}
@@ -41,6 +45,8 @@ function cardCompare(){
 		}
 		cardsPicked = [];
 }
+
+// CONGRATULATIONS MESSAGE
 
 // SHUFFLE METHOD
 
@@ -66,6 +72,7 @@ var imageLib = ["images/anthony_davis.jpg", "images/anthony_davis.jpg", "images/
 								"images/lebron_james.jpg", "images/rajon_rondo.jpg", "images/rajon_rondo.jpg", "images/steph_curry.jpg", "images/steph_curry.jpg",
 								"images/kobe_bryant.jpg", "images/kobe_bryant.jpg"];
 var shufImageLib;
+var currentScore = 0;
 
 
 
