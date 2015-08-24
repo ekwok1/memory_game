@@ -1,9 +1,6 @@
 window.onload = function() {
 	shuffleLib();
-	addListeners();
 };
-
-
 
 // ADD LISTENRS WITH LOGIC
 
@@ -26,8 +23,6 @@ function addListeners(){
 function getCardsPicked(){
 	return document.querySelectorAll(".picked");
 }
-
-
 
 // CARD COMPARE
 
@@ -56,8 +51,4 @@ function shuffleLib(){
 
 var imageLib = ["images/kobe_bryant.jpg", "images/kobe_bryant.jpg", "images/steph_curry.jpg", "images/steph_curry.jpg", "images/kevin_durant.jpg", "images/kevin_durant.jpg", "images/anthony_davis.jpg", "images/anthony_davis.jpg", "images/lebron_james.jpg", "images/lebron_james.jpg"];
 var shufImageLib;
-
-
-
-
 
