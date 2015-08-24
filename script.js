@@ -1,5 +1,6 @@
 window.onload = function() {
 	shuffleLib();
+	addListeners();
 };
 
 // ADD LISTENRS WITH LOGIC
@@ -45,10 +46,42 @@ function cardCompare(){
 
 function shuffleLib(){
 	shufImageLib = _.shuffle(imageLib);
+
+}
+
+// RESTART BOARD
+
+function restartBoard(){
+	var img = document.querySelectorAll("img");
+
+	_.each(img, function(element){
+		element.src = "images/nba_logo.jpg";
+	});
 }
 
 // GLOBAL VARIABLES
 
-var imageLib = ["images/kobe_bryant.jpg", "images/kobe_bryant.jpg", "images/steph_curry.jpg", "images/steph_curry.jpg", "images/kevin_durant.jpg", "images/kevin_durant.jpg", "images/anthony_davis.jpg", "images/anthony_davis.jpg", "images/lebron_james.jpg", "images/lebron_james.jpg"];
+var imageLib = ["images/anthony_davis.jpg", "images/anthony_davis.jpg", "images/james_harden.jpg", "images/james_harden.jpg",
+								"images/jeremy_lin.jpg", "images/jeremy_lin.jpg", "images/kevin_durant.jpg", "images/kevin_durant.jpg", "images/lebron_james.jpg",
+								"images/lebron_james.jpg", "images/rajon_rondo.jpg", "images/rajon_rondo.jpg", "images/steph_curry.jpg", "images/steph_curry.jpg",
+								"images/kobe_bryant.jpg", "images/kobe_bryant.jpg"];
 var shufImageLib;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
