@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Memory Game</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="jqscript.js"></script>
 	<script src="/Users/Eugene/Desktop/Galvanize/Miscellaneous/underscore.js"></script>
 </head>
 <body>
@@ -12,24 +13,26 @@
 
 	<h2>Score: <span id="currentScore">0</span></h2>
 
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<span id="congrats"></span>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
-	<div class="card"><img src="images/nba_logo.jpg"></div>
+	<div id="gameContainer">
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<span id="congrats"></span>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
+		<div class="card unmatched"><img src="images/nba_logo.jpg"></div>
 
-	<button type="submit" class="add_todo" id="restartButton" onclick="restartBoard(); shuffleLib(); addListeners();">RESTART</button>
+		<button type="submit" class="add_todo" id="restartButton" onclick="shuffleLib(); reset(); addListener();">RESTART</button>
+	</div>
 </body>
 </html>

@@ -9,13 +9,13 @@ function addListeners(){
 	var img = document.querySelectorAll("img");
 
 	_.each(img, function(element, index){
-		element.addEventListener("click", function(){
+		element.addEventListener("click", function what(){
 			this.classList.add("picked");
 			if (getCardsPicked().length < 3) {
 				this.src = shufImageLib[index];
 			}
 			if (getCardsPicked().length === 2) {
-				window.setTimeout(function(){cardCompare();}, 1000);
+				window.setTimeout(function(){cardCompare()}, 1000);
 			}
 		});
 	});
@@ -54,7 +54,6 @@ function cardCompare(){
 
 function shuffleLib(){
 	shufImageLib = _.shuffle(imageLib);
-
 }
 
 // RESTART BOARD
